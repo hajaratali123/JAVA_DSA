@@ -3,7 +3,6 @@ package Basic.Linked_List;
 public class SinglyLL {
 
     static class Node {
-
         int data;
         Node next;
 
@@ -52,7 +51,12 @@ public class SinglyLL {
             System.out.print(temp.data + " ->");
             temp = temp.next;
         }
+        System.out.println("Null");
 
+    }
+
+    void insertAfter(int data,int pos){
+        
     }
 
     public static void main(String[] args) {
@@ -63,9 +67,9 @@ public class SinglyLL {
         System.out.println("fist list ");
         list.Print();
         System.out.println("Display linked list :");
-       // list.Display(list.head);
-       list.insertEnd(200);
-       System.out.println("updated list ");
+        // list.Display(list.head);
+        list.insertEnd(200);
+        System.out.println("updated list ");
         list.Print();
 
     }
