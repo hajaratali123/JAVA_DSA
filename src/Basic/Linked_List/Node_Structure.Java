@@ -1,4 +1,4 @@
-// Single linked list
+// ── Singly Linked List Node ──────────────────────────
 class node {
     int data; // to store value
     node next; // to reference to next node (null if it's last node)
@@ -8,7 +8,8 @@ class node {
         this.next=null;
     }
 }
-// Doubly linked list
+// ── Doubly Linked List Node ──────────────────────────
+
 class Dnode{
     int data;
     Dnode prev;
