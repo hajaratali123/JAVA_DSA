@@ -42,7 +42,7 @@ public class SinglyLL {
             return;
         }
         System.out.println(head.data + " -> ");
-        Display(head);
+        Display(head.next);
     }
 
     void Print() {
@@ -52,11 +52,17 @@ public class SinglyLL {
             temp = temp.next;
         }
         System.out.println("Null");
-
     }
 
-    void insertAfter(int data,int pos){
-        
+    void insertAfter(int data,int key){
+        Node curr = head;
+        while(curr!=null && curr.data!= key){
+            curr=curr.next;
+        }
+        if(curr == null) return;
+        Node newNode = new Node(data);
+        newNode.next=curr.next;
+        curr.next=newNode;
     }
 
     public static void main(String[] args) {
@@ -67,11 +73,12 @@ public class SinglyLL {
         System.out.println("fist list ");
         list.Print();
         System.out.println("Display linked list :");
-        // list.Display(list.head);
+        list.Display(list.head);
         list.insertEnd(200);
         System.out.println("updated list ");
         list.Print();
-
+        list.insertAfter(1000, 30);
+        list.Print();
     }
 
 }
