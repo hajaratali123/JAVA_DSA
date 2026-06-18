@@ -79,6 +79,8 @@ public class SinglyLL {
         list.Print();
         list.insertAfter(1000, 30);
         list.Print();
+        System.out.println(Integer.MIN_VALUE);
+        System.out.println(-Integer.MIN_VALUE);
     }
 
 }
